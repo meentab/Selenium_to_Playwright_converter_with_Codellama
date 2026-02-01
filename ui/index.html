@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B.L.A.S.T. Converter | Java to Playwright</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="background-orb"></div>
+    <div class="background-orb orb-2"></div>
+
+    <div class="glass-container">
+        <header>
+            <div class="logo">🚀 B.L.A.S.T.</div>
+            <p class="subtitle">Selenium Java &rarr; Playwright TypeScript</p>
+        </header>
+
+        <main class="converter-box">
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span>☕ Java Source</span>
+                    <span class="badge">Selenium / TestNG</span>
+                </div>
+                <textarea id="javaInput" placeholder="// Paste your Selenium Java code here...
+@Test
+public void example() {
+    driver.get('https://example.com');
+}"></textarea>
+            </div>
+
+            <div class="action-pane">
+                <button id="convertBtn" class="glow-button">
+                    <span>⚡ Convert</span>
+                </button>
+            </div>
+
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span>🎭 Playwright Output</span>
+                    <span class="badge ts-badge">TypeScript</span>
+                </div>
+                <div class="code-output-container">
+                    <pre><code id="tsOutput" class="language-typescript">// Generated code will appear here...</code></pre>
+                </div>
+                <div class="pane-footer" style="padding: 10px; text-align: right;">
+                    <button id="saveBtn" class="glow-button"
+                        style="font-size: 0.8rem; padding: 10px 20px; display: none;">
+                        💾 Save to Disk
+                    </button>
+                    <div id="saveStatus" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 5px;"></div>
+                </div>
+                <!-- Hidden textarea for copying if needed -->
+                <textarea id="hiddenOutput" style="display:none"></textarea>
+            </div>
+        </main>
+
+        <footer>
+            <div class="status-bar" id="statusBar">Ready to blast off.</div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
